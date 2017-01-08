@@ -1,0 +1,9 @@
+local FUNCTION_FILENAME=`function_name_to_filename "$@"`
+local FUNCTION_LOCATION=`dirname $FUNCTION_FILENAME`
+local FUNCTION_NAME=`basename $FUNCTION_FILENAME`
+local HELP_LOCATION="${FUNCTION_LOCATION}/.help"
+local HELP_FILE="${HELP_LOCATION}/${FUNCTION_NAME}.helpfile"
+
+mkdir -p $HELP_LOCATION 2> /dev/null
+vi -o -c "wincmd L" -c "wincmd h" $HOME/.bash_history $HELP_FILE $FUNCTION_FILENAME 
+
