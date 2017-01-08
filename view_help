@@ -8,4 +8,4 @@ local PARAM_NAMES_OF_FUNCTION=`param_names $FUNCTION_FILENAME`
 if [[ -n ${PARAM_NAMES_OF_FUNCTION} ]]; then
  local PARAM_NAMES_DESCRIPTION='Params (given by env vars or by command line) are '${PARAM_NAMES_OF_FUNCTION}'\n'
 fi
-echo -e ${FUNCTION_NAME}':\n'${PARAM_NAMES_DESCRIPTION}|cat - $HELP_FILE 2>/dev/null|less 
+echo -e ${FUNCTION_NAME}':\n'${PARAM_NAMES_DESCRIPTION}'\n'`tail -n +3 $HELP_FILE`|less 
