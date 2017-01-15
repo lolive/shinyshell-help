@@ -6,4 +6,3 @@ local HELP_FILE="${HELP_LOCATION}/${FUNCTION_NAME}.helpfile"
 
 mkdir -p $HELP_LOCATION 2> /dev/null
 vi -o -c "wincmd L" -c "wincmd h" $HOME/.bash_history $HELP_FILE $FUNCTION_FILENAME 
-
