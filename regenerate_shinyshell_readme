@@ -1,9 +1,9 @@
 local SHINYSHELL_README=${BD}/README.md
 cat ${BD}/.README.md > $SHINYSHELL_README
-for package in `list_packages`;do 
+for PACKAGE in `list_packages`;do 
     echo "*** "${package}": " >> ${SHINYSHELL_README}
       echo -n "(" >> ${SHINYSHELL_README}
-        for function in `list_functions ${package}`;do
+        for function in `list_functions`;do
              echo -n "${function} ">> ${SHINYSHELL_README}
                done
                  echo ")" >> ${SHINYSHELL_README}
