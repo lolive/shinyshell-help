@@ -1,13 +1,14 @@
+name_params GITHUB_USER
 local SHINYSHELL_README=${BD}/README.md
 cat ${BD}/.README.md > $SHINYSHELL_README
 local PACKAGE
 for PACKAGE in `list_packages`;do 
     echo "*** "${PACKAGE}": " >> ${SHINYSHELL_README}
-      echo -n "(" >> ${SHINYSHELL_README}
+      echo -n "( " >> ${SHINYSHELL_README}
         for function in `list_functions`;do
-             echo -n "${function} ">> ${SHINYSHELL_README}
+             echo -n '['"${function}"'](https://raw.githubusercontent.com/'${GITHUB_USER}/shinyshell-${PACKAGE}/master/.help/${function}'.helpfile) ' >> ${SHINYSHELL_README}
                done
-                 echo ")" >> ${SHINYSHELL_README}
+                 echo " )" >> ${SHINYSHELL_README}
                    echo >> ${SHINYSHELL_README}
                    done
 
