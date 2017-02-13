@@ -1,0 +1,1 @@
+vi ${BD}/.README.md && cat ${BD}/.README.md > ${BD}/README.md
