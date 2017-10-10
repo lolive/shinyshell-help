@@ -2,6 +2,7 @@ name_params GITHUB_USER
 local SHINYSHELL_README=${BD}/README.md
 cat ${BD}/.README.md > $SHINYSHELL_README
 local PACKAGE
+echo >> ${SHINYSHELL_README}
 for PACKAGE in `list_packages`;do 
     echo "*** "${PACKAGE}": " >> ${SHINYSHELL_README}
       echo -n "( " >> ${SHINYSHELL_README}
