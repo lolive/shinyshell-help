@@ -14,5 +14,6 @@ touch $HELP_FILE
 echo
 echo  "## ${FUNCTION_NAME} ${PARAM_NAMES_OF_FUNCTION} :" 
 echo
-tail -n +3 $HELP_FILE
+#tail -n +3 $HELP_FILE
+cat $HELP_FILE
 echo
