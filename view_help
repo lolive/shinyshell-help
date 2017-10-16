@@ -11,5 +11,8 @@ local PARAM_NAMES_OF_FUNCTION=`param_names $FUNCTION_FILENAME`
 #fi
 mkdir -p $HELP_LOCATION
 touch $HELP_FILE
-#echo -e ${FUNCTION_NAME}':\n'${PARAM_NAMES_DESCRIPTION}'\n'`tail -n +3 $HELP_FILE`|less 
-echo -e $ ${FUNCTION_NAME} ${PARAM_NAMES_OF_FUNCTION}' : "'`tail -n +3 $HELP_FILE`'"\n'
+echo
+echo  "## ${FUNCTION_NAME} ${PARAM_NAMES_OF_FUNCTION} :" 
+echo
+tail -n +3 $HELP_FILE
+echo
