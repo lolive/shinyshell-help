@@ -1,4 +1,4 @@
-This is package help of Shinyshell.
+# Package "Shinyshell-help":
 
 This package contains the following functions:
 
